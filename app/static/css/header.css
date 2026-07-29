@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../fonts/CormorantGaramond-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../fonts/CormorantGaramond-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    src: url("../fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    src: url("../fonts/SourceSans3-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 200 900;
+    font-display: swap;
+}
+
+body {
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 1.55;
+}
+
+.sg-header {
+    --sg-sunflower: #f6c445;
+    --sg-leaf: #466b3a;
+    --sg-deep: #2f3a2e;
+    overflow: visible;
+}
+
+.sg-brand-lock {
+    align-items: center;
+    display: inline-flex;
+    min-height: 2.8rem;
+    margin-top: 1.2rem;
+    padding-left: clamp(5.9rem, 4.8rem + 2.3vw, 7.5rem);
+    position: relative;
+}
+
+.sg-brand-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sg-logo {
+    bottom: -22px;
+    height: clamp(5.3rem, 4.35rem + 2.3vw, 6.6rem);
+    left: 0;
+    position: absolute;
+    width: clamp(5.3rem, 4.35rem + 2.3vw, 6.6rem);
+}
+
+.sg-brand {
+    color: var(--sg-leaf);
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: clamp(1.45rem, 1.05rem + 1.25vw, 1.95rem);
+    font-weight: 650;
+    letter-spacing: 0.018em;
+    line-height: 0.95;
+}
+
+.sg-kicker {
+    font-size: clamp(0.72rem, 0.68rem + 0.12vw, 0.8rem);
+    font-weight: 600;
+    letter-spacing: 0.22em;
+}
+
+.sg-nav-link {
+    color: var(--sg-deep);
+    display: inline-block;
+    font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 180ms ease;
+}
+
+.sg-nav-link::after {
+    background-color: var(--sg-sunflower);
+    border-radius: 9999px;
+    bottom: -2px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms ease;
+    width: 100%;
+}
+
+.sg-nav-link:hover,
+.sg-nav-link:focus-visible {
+    color: var(--sg-leaf);
+}
+
+.sg-nav-link:hover::after,
+.sg-nav-link:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.sg-hero-title {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: clamp(2.15rem, 1.75rem + 2vw, 4rem);
+    font-weight: 620;
+    letter-spacing: 0.01em;
+    line-height: 0.98;
+    text-wrap: balance;
+}
+
+.sg-hero-lead {
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.2rem);
+    max-width: 62ch;
+}
+
+.sg-cta {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .sg-nav-link {
+        font-size: 0.95rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sg-nav-link,
+    .sg-nav-link::after {
+        transition: none;
+    }
+}
