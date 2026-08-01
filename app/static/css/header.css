@@ -183,7 +183,7 @@ body {
     }
 
     .sg-header > .relative {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: 0.75rem;
         justify-content: flex-start;
@@ -205,21 +205,22 @@ body {
 
     .sg-brand-lock {
         align-items: center;
-        flex-direction: row;
-        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
         padding-left: 0;
-        width: auto;
+        width: 100%;
     }
 
     .sg-logo {
-        height: auto;
-        margin-bottom: 0;
+        height: 7rem;
+        margin-bottom: -2rem;
         width: clamp(7rem, 20vw, 8.5rem);
     }
 
     .sg-brand-content {
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
     }
 
     .sg-brand {
