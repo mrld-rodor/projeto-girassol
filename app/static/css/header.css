@@ -67,6 +67,7 @@ body {
     align-items: center;
     display: inline-flex;
     flex-shrink: 1;
+    gap: 1.25rem;
     margin: 0;
     max-width: 100%;
     min-height: 0;
@@ -78,19 +79,20 @@ body {
 }
 
 .sg-brand-content {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-width: 0;
+    text-align: left;
 }
 
 .sg-logo {
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
     height: auto;
-    margin-right: clamp(0.75rem, 1.2vw, 1rem);
     position: relative;
-    width: clamp(7rem, 10vw, 13rem);
+    width: clamp(8rem, 12vw, 14rem);
 }
 
 .sg-brand {
@@ -108,9 +110,9 @@ body {
     font-size: clamp(0.75rem, 1.3vw, 1.05rem);
     font-weight: 600;
     letter-spacing: 0.22em;
-    margin-left: 2.5rem;
-
+    margin-left: 0;
 }
+
 
 .sg-nav-link {
     color: var(--sg-deep);
@@ -177,19 +179,24 @@ body {
 
     .sg-header {
         min-height: auto;
-        padding: 1rem 0;
+        padding: 0.9rem 0;
     }
 
     .sg-header > .relative {
-        flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .sg-nav-shell {
         left: 0;
         margin-left: 0;
-        max-width: calc(100vw - 2rem);
+        max-width: 100%;
         position: relative;
         top: auto;
         transform: none;
@@ -197,17 +204,17 @@ body {
     }
 
     .sg-brand-lock {
-        flex-direction: row;
         align-items: center;
+        flex-direction: row;
         margin: 0;
         padding-left: 0;
+        width: auto;
     }
 
     .sg-logo {
         height: auto;
-        width: clamp(6rem, 18vw, 8rem);
-        margin-right: 0.75rem;
         margin-bottom: 0;
+        width: clamp(7rem, 20vw, 8.5rem);
     }
 
     .sg-brand-content {
@@ -216,12 +223,18 @@ body {
     }
 
     .sg-brand {
-        font-size: clamp(1.25rem, 4vw, 1.7rem);
+        font-size: clamp(1.2rem, 4vw, 1.65rem);
         margin-top: 0;
     }
 
     .sg-kicker {
-        font-size: clamp(0.7rem, 2vw, 0.8rem);
+        font-size: clamp(0.68rem, 2vw, 0.8rem);
+        margin-left: 0;
+    }
+
+    #menu-toggle {
+        right: 1rem;
+        top: 0.25rem;
     }
 }
 
