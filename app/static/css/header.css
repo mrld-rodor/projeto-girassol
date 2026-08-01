@@ -43,7 +43,7 @@ body {
     --sg-deep: #2f3a2e;
     align-items: center;
     display: flex;
-    min-height: 8rem;
+    min-height: 7rem;
     overflow: visible;
 }
 
@@ -89,8 +89,10 @@ body {
 
 .sg-logo {
     aspect-ratio: 1 / 1;
+    display: block;
     flex-shrink: 0;
     height: auto;
+    margin: 0;
     position: relative;
     width: clamp(8rem, 12vw, 14rem);
 }
@@ -183,7 +185,7 @@ body {
     }
 
     .sg-header > .relative {
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         gap: 0.75rem;
         justify-content: flex-start;
@@ -205,22 +207,24 @@ body {
 
     .sg-brand-lock {
         align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
         padding-left: 0;
-        width: 100%;
+        width: fit-content;
     }
 
     .sg-logo {
-        height: 7rem;
-        margin-bottom: -2rem;
+        display: block;
+        height: auto;
+        margin-right: 0.5rem;
         width: clamp(7rem, 20vw, 8.5rem);
     }
 
     .sg-brand-content {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
+        margin-left: -1.5rem;
     }
 
     .sg-brand {
