@@ -38,19 +38,29 @@ body {
 }
 
 .sg-header {
-    --sg-sunflower: #f6c445;
+    --sg-sunflower: #ffffff;
     --sg-leaf: #466b3a;
     --sg-deep: #2f3a2e;
+    align-items: center;
+    display: flex;
+    min-height: 8rem;
     overflow: visible;
+}
+
+.sg-header > .relative {
+    width: 100%;
+    justify-content: space-between;
 }
 
 .sg-brand-lock {
     align-items: center;
     display: inline-flex;
-    min-height: 2.8rem;
-    margin-top: 1.2rem;
-    padding-left: clamp(5.9rem, 4.8rem + 2.3vw, 7.5rem);
+    margin: 0;
+    min-height: 0;
+    padding-left: 0;
     position: relative;
+    margin-left: -20rem;
+    margin-top: 2rem;
 }
 
 .sg-brand-content {
@@ -60,24 +70,25 @@ body {
 }
 
 .sg-logo {
-    bottom: -22px;
-    height: clamp(5.3rem, 4.35rem + 2.3vw, 6.6rem);
-    left: 0;
-    position: absolute;
-    width: clamp(5.3rem, 4.35rem + 2.3vw, 6.6rem);
+    height: 13rem;
+    margin-right: clamp(0.9rem, 0.7rem + 0.6vw, 1.2rem);
+    position: relative;
+    width: 15rem;
 }
 
 .sg-brand {
     color: var(--sg-leaf);
     font-family: "Cormorant Garamond", "Times New Roman", serif;
-    font-size: clamp(1.45rem, 1.05rem + 1.25vw, 1.95rem);
+    font-size: clamp(2.2rem, 1.8rem + 1.4vw, 3rem);
     font-weight: 650;
     letter-spacing: 0.018em;
     line-height: 0.95;
+    margin-left: 0;
+    margin-top: -3.5rem;
 }
 
 .sg-kicker {
-    font-size: clamp(0.72rem, 0.68rem + 0.12vw, 0.8rem);
+    font-size: clamp(0.9rem, 0.8rem + 0.18vw, 1.05rem);
     font-weight: 600;
     letter-spacing: 0.22em;
 }
@@ -85,7 +96,7 @@ body {
 .sg-nav-link {
     color: var(--sg-deep);
     display: inline-block;
-    font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
     font-weight: 600;
     letter-spacing: 0.04em;
     padding: 0.35rem 0;
@@ -96,7 +107,7 @@ body {
 }
 
 .sg-nav-link::after {
-    background-color: var(--sg-sunflower);
+    background-color: #f6c445;
     border-radius: 9999px;
     bottom: -2px;
     content: "";
@@ -143,6 +154,45 @@ body {
 @media (max-width: 767px) {
     .sg-nav-link {
         font-size: 0.95rem;
+    }
+
+    .sg-header {
+        min-height: auto;
+        padding: 1rem 0;
+    }
+
+    .sg-header > .relative {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .sg-brand-lock {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .sg-logo {
+        height: 11rem;
+        width: 11rem;
+        margin-right: 0;
+        margin-bottom: -2.375rem;
+    }
+
+    .sg-brand-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .sg-brand {
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+
+    .sg-kicker {
+        font-size: 0.8rem;
     }
 }
 
