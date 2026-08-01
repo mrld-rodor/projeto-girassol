@@ -48,49 +48,68 @@ body {
 }
 
 .sg-header > .relative {
+    align-items: center;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0;
+    padding-right: clamp(1rem, 2vw, 2rem);
+}
+
+.sg-nav-shell {
+    margin-left: auto;
+    max-width: 100%;
+    position: relative;
 }
 
 .sg-brand-lock {
     align-items: center;
     display: inline-flex;
+    flex-shrink: 1;
     margin: 0;
+    max-width: 100%;
     min-height: 0;
+    min-width: 0;
     padding-left: 0;
     position: relative;
-    margin-left: -20rem;
-    margin-top: 2rem;
+    margin-left: 0;
+    margin-top: 0;
 }
 
 .sg-brand-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;
 }
 
 .sg-logo {
-    height: 13rem;
-    margin-right: clamp(0.9rem, 0.7rem + 0.6vw, 1.2rem);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    height: auto;
+    margin-right: clamp(0.75rem, 1.2vw, 1rem);
     position: relative;
-    width: 15rem;
+    width: clamp(7rem, 10vw, 13rem);
 }
 
 .sg-brand {
     color: var(--sg-leaf);
     font-family: "Cormorant Garamond", "Times New Roman", serif;
-    font-size: clamp(2.2rem, 1.8rem + 1.4vw, 3rem);
+    font-size: clamp(1.4rem, 3vw, 3rem);
     font-weight: 650;
     letter-spacing: 0.018em;
     line-height: 0.95;
     margin-left: 0;
-    margin-top: -3.5rem;
+    margin-top: 0;
 }
 
 .sg-kicker {
-    font-size: clamp(0.9rem, 0.8rem + 0.18vw, 1.05rem);
+    font-size: clamp(0.75rem, 1.3vw, 1.05rem);
     font-weight: 600;
     letter-spacing: 0.22em;
+    margin-left: 2.5rem;
+
 }
 
 .sg-nav-link {
@@ -163,36 +182,46 @@ body {
 
     .sg-header > .relative {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
     }
 
+    .sg-nav-shell {
+        left: 0;
+        margin-left: 0;
+        max-width: calc(100vw - 2rem);
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 100%;
+    }
+
     .sg-brand-lock {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin: 0;
         padding-left: 0;
     }
 
     .sg-logo {
-        height: 11rem;
-        width: 11rem;
-        margin-right: 0;
-        margin-bottom: -2.375rem;
+        height: auto;
+        width: clamp(6rem, 18vw, 8rem);
+        margin-right: 0.75rem;
+        margin-bottom: 0;
     }
 
     .sg-brand-content {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .sg-brand {
-        font-size: 1.8rem;
+        font-size: clamp(1.25rem, 4vw, 1.7rem);
         margin-top: 0;
     }
 
     .sg-kicker {
-        font-size: 0.8rem;
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
     }
 }
 

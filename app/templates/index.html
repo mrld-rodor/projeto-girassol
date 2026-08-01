@@ -15,7 +15,7 @@
 </head>
 <body class="bg-stone-50 text-stone-900">
     <header class="sg-header sticky top-0 z-50 border-b border-stone-200/80 bg-white/90 backdrop-blur-sm">
-        <div class="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div class="relative flex w-full items-center justify-between py-3 pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pl-8 lg:pr-8">
             <a href="#inicio" class="sg-brand-lock" aria-label="Ir para o inicio">
                 <img
                     src="{{ url_for('static', filename='images/logo_logo.png') }}"
@@ -44,11 +44,11 @@
                 </svg>
             </button>
 
-            <nav id="menu-principal" class="absolute left-1/2 top-[calc(100%+0.75rem)] z-50 hidden w-[min(90vw,22rem)] -translate-x-1/2 md:static md:block md:w-auto md:max-w-none md:-translate-x-0" aria-label="Menu principal">
+            <nav id="menu-principal" class="sg-nav-shell absolute left-1/2 top-[calc(100%+0.75rem)] z-50 hidden w-[min(90vw,22rem)] -translate-x-1/2 md:static md:block md:w-auto md:max-w-none md:-translate-x-0" aria-label="Menu principal">
                 <ul class="flex flex-col items-center gap-1.5 text-center rounded-xl border border-amber-100 bg-white px-3 py-2.5 shadow-lg md:flex-row md:items-center md:justify-center md:gap-6 md:border-none md:bg-transparent md:p-0 md:shadow-none">
-                    <li><a href="#inicio" class="sg-nav-link">Inicio</a></li>
+                    <li><a href="#inicio" class="sg-nav-link">Início</a></li>
                     <li><a href="#sobre" class="sg-nav-link">Sobre</a></li>
-                    <li><a href="#servicos" class="sg-nav-link">Servicos</a></li>
+                    <li><a href="#servicos" class="sg-nav-link">Serviços</a></li>
                     <li>
                         <a href="#contacto" class="sg-cta inline-flex items-center justify-center rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500">
                             Falar Connosco
