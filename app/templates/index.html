@@ -54,17 +54,53 @@
                             Falar Connosco
                         </a>
                     </li>
+                    <li class="sg-mobile-coin-wrap md:hidden" aria-hidden="true">
+                        <img
+                            src="{{ url_for('static', filename='images/logo_logo.png') }}"
+                            alt=""
+                            class="sg-mobile-coin"
+                            loading="lazy"
+                        >
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="inicio" class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-            <h1 class="sg-hero-title text-4xl text-stone-900 sm:text-5xl">Cuidar de si pode comecar com um pequeno passo.</h1>
-            <p class="sg-hero-lead mt-4 text-stone-700">
-                Estrutura inicial pronta. No proximo passo, desenvolvemos o hero completo e as secoes da landing page.
-            </p>
+        <section id="inicio" class="sg-hero-wrap">
+            <div class="sg-hero-shell mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-20">
+                <div class="sg-hero-copy">
+                    <p class="sg-hero-eyebrow">ATENDIMENTO INTEGRATIVO</p>
+                    <h1 class="sg-hero-title text-stone-900">Seu bem-estar merece cuidado, equilíbrio e acolhimento.</h1>
+                    <p class="sg-hero-lead text-stone-700">
+                        No Espaço Girassol, cada atendimento é um convite para cuidar de si com mais consciência, 
+                        serenidade e acolhimento. Através das Terapias Integrativas, oferecemos um caminho para promover
+                        equilíbrio físico, emocional, mental e energético, respeitando sua história, seu tempo 
+                        e suas necessidades.
+                    </p>
+                    <div class="sg-hero-actions">
+                        <a href="#contacto" class="sg-hero-cta-primary">Agendar avaliacao</a>
+                        <a href="#servicos" class="sg-hero-cta-secondary">Conhecer servicos</a>
+                    </div>
+                </div>
+
+                <div class="sg-hero-visual" aria-hidden="true">
+                    <div class="sg-hero-panel">
+                        <img
+                            src="{{ url_for('static', filename='images/logo_v3.png') }}"
+                            alt=""
+                            class="sg-hero-seal"
+                        >
+                        <p class="sg-hero-panel-kicker">Protocolo de cuidado</p>
+                        <ul class="sg-hero-points">
+                            <li>Acolhimento inicial com escuta ativa</li>
+                            <li>Plano terapeutico claro e personalizado</li>
+                            <li>Acompanhamento continuo da evolucao</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="sobre" class="h-1"></section>
         <section id="servicos" class="h-1"></section>
