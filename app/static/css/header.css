@@ -334,6 +334,183 @@ body {
     text-transform: uppercase;
 }
 
+.sg-about-wrap {
+    background:
+        radial-gradient(circle at 88% 11%, rgba(246, 196, 69, 0.16), transparent 35%),
+        linear-gradient(180deg, #fffef9 0%, #fff9eb 100%);
+}
+
+.sg-section-eyebrow {
+    color: #7a4b1e;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.sg-section-title {
+    color: #2f3a2e;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: clamp(1.95rem, 1.5rem + 1.9vw, 3.2rem);
+    font-weight: 640;
+    letter-spacing: 0.01em;
+    line-height: 1.04;
+    margin: 0.45rem 0 0;
+    text-wrap: balance;
+}
+
+.sg-about-grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    margin-top: 1.4rem;
+}
+
+.sg-about-text-flow {
+    color: #334130;
+    display: grid;
+    gap: 0.95rem;
+    line-height: 1.72;
+}
+
+.sg-about-text-flow p {
+    margin: 0;
+}
+
+.sg-about-aside {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.sg-about-card {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(247, 235, 203, 0.86));
+    border: 1px solid #f6c445;
+    border-radius: 1rem;
+    box-shadow: 0 10px 24px rgba(122, 75, 30, 0.12);
+    padding: 1rem 1.05rem;
+}
+
+.sg-about-card h3 {
+    color: #466b3a;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: 1.6rem;
+    font-weight: 640;
+    margin: 0;
+}
+
+.sg-about-card p {
+    color: #344634;
+    margin: 0.45rem 0 0;
+}
+
+.sg-values-panel {
+    margin-top: 1.35rem;
+}
+
+.sg-values-panel h3,
+.sg-how-title,
+.sg-why-panel h3,
+.sg-therapist-card h3 {
+    color: #2f3a2e;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: clamp(1.55rem, 1.35rem + 0.8vw, 2.2rem);
+    font-weight: 630;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.sg-values-list {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    list-style: none;
+    margin: 0.8rem 0 0;
+    padding: 0;
+}
+
+.sg-values-list li {
+    background-color: rgba(255, 255, 255, 0.86);
+    border: 1px solid #f6c445;
+    border-radius: 9999px;
+    color: #3c4d3a;
+    font-size: 0.94rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+}
+
+.sg-how-wrap,
+.sg-why-panel,
+.sg-therapist-card {
+    margin-top: 1.5rem;
+}
+
+.sg-how-list {
+    counter-reset: how-steps;
+    display: grid;
+    gap: 0.9rem;
+    list-style: none;
+    margin: 0.95rem 0 0;
+    padding: 0;
+}
+
+.sg-how-item {
+    background-color: rgba(255, 255, 255, 0.86);
+    border: 1px solid #f6c445;
+    border-radius: 1rem;
+    padding: 0.95rem 1rem;
+    position: relative;
+}
+
+.sg-how-item::before {
+    color: #7a4b1e;
+    content: counter(how-steps, decimal-leading-zero);
+    counter-increment: how-steps;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.sg-how-item h4 {
+    color: #466b3a;
+    margin: 0.15rem 0 0;
+}
+
+.sg-how-item p,
+.sg-why-panel p,
+.sg-therapist-card p {
+    color: #3c4d3a;
+    margin: 0.4rem 0 0;
+}
+
+.sg-why-panel {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(247, 235, 203, 0.88));
+    border: 1px solid #f6c445;
+    border-radius: 1rem;
+    box-shadow: 0 10px 24px rgba(122, 75, 30, 0.12);
+    padding: 1.1rem;
+}
+
+.sg-why-list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+}
+
+.sg-why-list li::marker {
+    color: #e89b16;
+}
+
+.sg-therapist-card {
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid #f6c445;
+    border-radius: 1rem;
+    box-shadow: 0 12px 28px rgba(122, 75, 30, 0.11);
+    padding: 1.2rem;
+}
+
 @media (max-width: 767px) {
     .sg-nav-link {
         font-size: 0.95rem;
@@ -427,6 +604,11 @@ body {
 
     .sg-hero-panel {
         max-width: 100%;
+    }
+
+    .sg-about-grid,
+    .sg-values-list {
+        grid-template-columns: 1fr;
     }
 }
 

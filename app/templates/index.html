@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_logo.png') }}">
 </head>
-<body class="bg-stone-50 text-stone-900">
+<body id="topo" class="bg-stone-50 text-stone-900">
     <header class="sg-header sticky top-0 z-50 border-b border-stone-200/80 bg-white/90 backdrop-blur-sm">
         <div class="relative flex w-full items-center justify-between py-3 pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pl-8 lg:pr-8">
-            <a href="#inicio" class="sg-brand-lock" aria-label="Ir para o inicio">
+            <a href="#topo" class="sg-brand-lock" aria-label="Ir para o topo da pagina">
                 <img
                     src="{{ url_for('static', filename='images/logo_logo.png') }}"
                     alt="Logo do Espaco Girassol"
@@ -46,7 +46,7 @@
 
             <nav id="menu-principal" class="sg-nav-shell absolute left-1/2 top-[calc(100%+0.75rem)] z-50 hidden w-[min(66vw,13rem)] -translate-x-1/2 md:static md:block md:w-auto md:max-w-none md:-translate-x-0" aria-label="Menu principal">
                 <ul class="flex flex-col items-center gap-1.25 text-center rounded-xl border border-amber-100 bg-white px-1 py-2 shadow-lg md:flex-row md:items-center md:justify-center md:gap-6 md:border-none md:bg-transparent md:p-0 md:shadow-none">
-                    <li><a href="#inicio" class="sg-nav-link">Início</a></li>
+                    <li><a href="#topo" class="sg-nav-link">Início</a></li>
                     <li><a href="#sobre" class="sg-nav-link">Sobre</a></li>
                     <li><a href="#servicos" class="sg-nav-link">Serviços</a></li>
                     <li>
@@ -102,7 +102,138 @@
                 </div>
             </div>
         </section>
-        <section id="sobre" class="h-1"></section>
+        <section id="sobre" class="sg-about-wrap">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+                <p class="sg-section-eyebrow">Quem somos</p>
+                <h2 class="sg-section-title">Um espaco criado para cuidar de pessoas</h2>
+
+                <div class="sg-about-grid">
+                    <div class="sg-about-text-flow">
+                        <p>
+                            O Espaco Girassol nasceu da certeza de que o verdadeiro cuidado comeca quando
+                            alguem e ouvido, acolhido e respeitado em sua individualidade.
+                        </p>
+                        <p>
+                            Mais do que oferecer terapias, nossa missao e proporcionar experiencias que despertem
+                            equilibrio, tranquilidade e bem-estar, contribuindo para uma vida mais saudavel e harmoniosa.
+                        </p>
+                        <p>
+                            Cada atendimento e realizado de forma personalizada, considerando nao apenas os sintomas
+                            ou desafios do momento, mas a pessoa como um todo: corpo, mente, emocoes e energia.
+                        </p>
+                        <p>
+                            Aqui, voce encontra um ambiente preparado para desacelerar, respirar profundamente e
+                            permitir que o autocuidado faca parte da sua rotina.
+                        </p>
+                        <p>
+                            Nosso compromisso e oferecer um atendimento etico, humanizado e responsavel,
+                            sempre respeitando os limites das praticas integrativas e valorizando a confianca
+                            de cada pessoa que escolhe caminhar conosco.
+                        </p>
+                    </div>
+
+                    <aside class="sg-about-aside" aria-label="Missao e visao">
+                        <article class="sg-about-card">
+                            <h3>Missao</h3>
+                            <p>
+                                Promover o bem-estar integral por meio das Terapias Integrativas e Complementares,
+                                oferecendo um atendimento humanizado, acolhedor e personalizado que incentive
+                                o autocuidado e a qualidade de vida.
+                            </p>
+                        </article>
+                        <article class="sg-about-card">
+                            <h3>Visao</h3>
+                            <p>
+                                Ser reconhecido como um espaco de referencia em Terapias Integrativas, inspirando
+                                pessoas a viverem com mais equilibrio, saude, consciencia e qualidade de vida.
+                            </p>
+                        </article>
+                    </aside>
+                </div>
+
+                <div class="sg-values-panel" aria-label="Valores">
+                    <h3>Valores</h3>
+                    <ul class="sg-values-list">
+                        <li>Humanizacao</li>
+                        <li>Etica</li>
+                        <li>Respeito</li>
+                        <li>Empatia</li>
+                        <li>Amor pelo cuidado</li>
+                        <li>Acolhimento</li>
+                        <li>Confianca</li>
+                        <li>Bem-estar</li>
+                        <li>Equilibrio</li>
+                        <li>Espiritualidade com responsabilidade</li>
+                        <li>Desenvolvimento continuo</li>
+                    </ul>
+                </div>
+
+                <div class="sg-how-wrap" aria-label="Como funciona">
+                    <p class="sg-section-eyebrow">Como funciona</p>
+                    <h3 class="sg-how-title">Cuidar de voce pode comecar hoje.</h3>
+                    <ol class="sg-how-list">
+                        <li class="sg-how-item">
+                            <h4>Entre em contacto</h4>
+                            <p>
+                                Escolha a terapia de seu interesse e envie sua mensagem. Estamos prontos para
+                                esclarecer todas as suas duvidas.
+                            </p>
+                        </li>
+                        <li class="sg-how-item">
+                            <h4>Conversamos com voce</h4>
+                            <p>
+                                Entendemos suas necessidades, explicamos como funciona cada terapia e ajudamos
+                                na escolha do atendimento mais adequado.
+                            </p>
+                        </li>
+                        <li class="sg-how-item">
+                            <h4>Viva sua experiencia</h4>
+                            <p>
+                                Receba um atendimento personalizado em um ambiente acolhedor, pensado para
+                                proporcionar equilibrio, relaxamento e bem-estar.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="sg-why-panel" aria-label="Por que escolher o Espaco Girassol">
+                    <h3>Por que escolher o Espaco Girassol?</h3>
+                    <p>
+                        Porque acreditamos que cuidar da saude vai alem de aliviar sintomas. E proporcionar
+                        momentos de reconexao consigo mesmo.
+                    </p>
+                    <ul class="sg-why-list">
+                        <li>Atendimento totalmente personalizado.</li>
+                        <li>Ambiente tranquilo e preparado para o seu conforto.</li>
+                        <li>Escuta ativa e acolhimento em cada sessao.</li>
+                        <li>Terapias conduzidas com etica e responsabilidade.</li>
+                        <li>Respeito as necessidades individuais.</li>
+                        <li>Compromisso com o seu bem-estar integral.</li>
+                    </ul>
+                </div>
+
+                <article class="sg-therapist-card" aria-label="Sobre a terapeuta">
+                    <p class="sg-section-eyebrow">Sobre a terapeuta</p>
+                    <h3>Nivania Helena Oliveira de Almeida Silva</h3>
+                    <p>
+                        Terapeuta Integrativa apaixonada pelo cuidado humano e pelo desenvolvimento do bem-estar integral.
+                    </p>
+                    <p>
+                        Sua atuacao e baseada no acolhimento, na escuta respeitosa e no compromisso de oferecer
+                        atendimentos individualizados, utilizando praticas integrativas que auxiliam no equilibrio
+                        fisico, emocional, mental e energetico.
+                    </p>
+                    <p>
+                        Cada pessoa e unica. Por isso, cada atendimento e planejado de forma personalizada,
+                        sempre respeitando as necessidades, os limites e o momento de vida de quem procura o Espaco Girassol.
+                    </p>
+                    <p>
+                        Mais do que aplicar tecnicas, seu proposito e oferecer um espaco seguro, leve e acolhedor,
+                        onde cada pessoa possa fortalecer seu processo de autoconhecimento, equilibrio e qualidade de vida.
+                    </p>
+                </article>
+            </div>
+        </section>
         <section id="servicos" class="h-1"></section>
         <section id="contacto" class="h-1"></section>
     </main>
