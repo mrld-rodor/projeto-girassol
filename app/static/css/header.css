@@ -30,6 +30,34 @@
     font-display: swap;
 }
 
+@media (max-width: 767px) {
+    .sg-header > .relative {
+        gap: 0.2rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 0.02rem;
+        padding-bottom: 0.02rem;
+    }
+
+    .sg-brand-lock {
+        gap: 0.35rem;
+    }
+
+    .sg-logo {
+        width: clamp(2.4rem, 7vw, 3.4rem);
+    }
+
+    .sg-brand {
+        font-size: clamp(0.8rem, 2.8vw, 1rem);
+        line-height: 0.9;
+    }
+
+    .sg-kicker {
+        font-size: clamp(0.5rem, 1.6vw, 0.62rem);
+        letter-spacing: 0.1em;
+    }
+}
+
 body {
     font-family: "Source Sans 3", "Segoe UI", sans-serif;
     font-size: 16px;
@@ -53,7 +81,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.75rem;
-    padding-left: 0;
+    padding-left: clamp(1rem, 2vw, 2rem);
     padding-right: clamp(1rem, 2vw, 2rem);
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
@@ -553,33 +581,34 @@ body {
 
     .sg-header {
         min-height: auto;
-        padding: 0.9rem 0;
+        padding: 0.25rem 0;
     }
 
     .sg-header > .relative {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0.75rem;
-        justify-content: flex-start;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0;
-        padding-bottom: 0;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.7rem;
+        justify-content: space-between;
+        padding-left: 1.45rem;
+        padding-right: 1.45rem;
+        padding-top: 0.16rem;
+        padding-bottom: 0.16rem;
     }
 
     .sg-nav-shell {
-        left: 0;
-        margin-left: 0;
+        left: auto;
+        margin-left: auto;
         max-width: 100%;
         position: relative;
         top: auto;
         transform: none;
-        width: 100%;
+        width: auto;
     }
 
     .sg-brand-lock {
         align-items: center;
         flex-direction: row;
+        gap: 0.8rem;
         justify-content: flex-start;
         margin: 0;
         padding-left: 0;
@@ -589,30 +618,31 @@ body {
     .sg-logo {
         display: block;
         height: auto;
-        margin-right: 0.5rem;
-        width: clamp(7rem, 20vw, 8.5rem);
+        margin-right: 0;
+        width: clamp(5.2rem, 13vw, 7rem);
     }
 
     .sg-brand-content {
         align-items: flex-start;
+        margin-left: 0;
         text-align: left;
-        margin-left: -1.5rem;
     }
 
     .sg-brand {
-        font-size: clamp(1.2rem, 4vw, 1.65rem);
+        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
         margin-top: 0;
     }
 
     .sg-kicker {
-        font-size: clamp(0.68rem, 2vw, 0.8rem);
+        font-size: clamp(0.68rem, 2.3vw, 0.84rem);
+        letter-spacing: 0.1em;
         margin-left: 0;
     }
 
     #menu-toggle {
         border-color: #f6c445;
-        right: 1rem;
-        top: 0.25rem;
+        right: 0.8rem;
+        top: 0.2rem;
     }
 
     #menu-principal ul {
