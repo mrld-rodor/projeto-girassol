@@ -338,6 +338,13 @@ body {
     background:
         radial-gradient(circle at 88% 11%, rgba(246, 196, 69, 0.16), transparent 35%),
         linear-gradient(180deg, #fffef9 0%, #fff9eb 100%);
+    scroll-margin-top: 6.75rem;
+}
+
+@media (min-width: 768px) {
+    .sg-about-wrap {
+        scroll-margin-top: calc(9.5rem + 30px);
+    }
 }
 
 .sg-section-eyebrow {
@@ -609,6 +616,10 @@ body {
     .sg-about-grid,
     .sg-values-list {
         grid-template-columns: 1fr;
+    }
+
+    .sg-about-wrap {
+        scroll-margin-top: 9.5rem;
     }
 }
 
