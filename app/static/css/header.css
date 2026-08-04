@@ -299,7 +299,7 @@ body {
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    max-width: 24rem;
+    max-width: 29rem;
     padding: 0;
     width: 100%;
 }
@@ -314,13 +314,17 @@ body {
 }
 
 .sg-hero-portrait {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: auto;
     border: 0;
-    border-radius: 1.35rem;
-    box-shadow: 0 18px 40px rgba(122, 75, 30, 0.14);
+    border-radius: 0;
+    box-shadow: none;
     display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 0;
-    object-fit: cover;
+    object-fit: contain;
+    max-width: 18rem;
     width: 100%;
 }
 
@@ -668,7 +672,11 @@ body {
     }
 
     .sg-hero-panel {
-        max-width: 100%;
+        max-width: min(100%, 28rem);
+    }
+
+    .sg-hero-portrait {
+        max-width: clamp(11rem, 62vw, 14.5rem);
     }
 
     .sg-about-grid,
