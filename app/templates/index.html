@@ -52,12 +52,12 @@
                     <li><a href="#servicos" class="sg-nav-link">Serviços</a></li>
                     <li>
                         <a href="#contacto" class="sg-cta inline-flex items-center justify-center rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500">
-                            Falar Connosco
+                            Falar Conosco
                         </a>
                     </li>
                     <li class="sg-mobile-coin-wrap md:hidden" aria-hidden="true">
                         <img
-                            src="{{ url_for('static', filename='images/logo_logo.png') }}"
+                            src="{{ url_for('static', filename='images/logo_logo_header.png') }}"
                             alt=""
                             class="sg-mobile-coin"
                             loading="lazy"
@@ -82,14 +82,14 @@
                     </p>
                     <div class="sg-hero-actions">
                         <a href="#contacto" class="sg-hero-cta-primary">Agendar avaliacao</a>
-                        <a href="#servicos" class="sg-hero-cta-secondary">Conhecer servicos</a>
+                        <a href="#sobre" class="sg-hero-cta-secondary">Como podemos te ajudar</a>
                     </div>
                 </div>
 
                 <div class="sg-hero-visual">
                     <div class="sg-hero-panel">
                         <img
-                            src="{{ url_for('static', filename='images/ni_foto_01.png') }}"
+                            src="{{ url_for('static', filename='images/ni_foto_04.png') }}"
                             alt="Nivania Helena Oliveira de Almeida Silva, terapeuta integrativa do Espaco Girassol"
                             class="sg-hero-portrait"
                         >
@@ -99,6 +99,61 @@
                             Um atendimento acolhedor, etico e personalizado para apoiar seu equilibrio fisico,
                             emocional, mental e energetico.
                         </p> -->
+                    </div>
+                </div>
+
+                <div id="servicos" class="sg-hero-services-block" aria-label="Galeria de servicos">
+                    <div class="sg-services-grid">
+                        <article class="sg-service-card">
+                            <div class="sg-service-media">
+                                <img
+                                    src="{{ url_for('static', filename='images/maos.png') }}"
+                                    alt="Servico 1"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <p class="sg-service-label">Aromaterapia</p>
+                        </article>
+
+                        <article class="sg-service-card">
+                            <div class="sg-service-media">
+                                <img
+                                    src="{{ url_for('static', filename='images/maos01.png') }}"
+                                    alt="Servico 2"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <p class="sg-service-label">Cristaloterapia</p>
+                        </article>
+
+                        <article class="sg-service-card">
+                            <div class="sg-service-media">
+                                <img
+                                    src="{{ url_for('static', filename='images/maos02.png') }}"
+                                    alt="Servico 3"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <p class="sg-service-label">Radiestesia</p>
+                        </article>
+
+                        <article class="sg-service-card">
+                            <div class="sg-service-media">
+                                <img
+                                    src="{{ url_for('static', filename='images/maos03.png') }}"
+                                    alt="Servico 4"
+                                    loading="lazy"
+                                >
+                            </div>
+                            <p class="sg-service-label">Reiki</p>
+                        </article>
+
+                        <aside class="sg-service-note" aria-label="Resumo dos servicos">
+                            <p class="sg-service-note-text">
+                                Um espaco dedicado ao cuidado integral, ao equilibrio e ao bem-estar.
+                            </p>
+                            <a href="#servicos" class="sg-service-note-cta">Conheca todos os nossos servicos</a>
+                        </aside>
                     </div>
                 </div>
             </div>
@@ -235,7 +290,6 @@
                 </article>
             </div>
         </section>
-        <section id="servicos" class="h-1"></section>
         <section id="contacto" class="h-1"></section>
     </main>
 

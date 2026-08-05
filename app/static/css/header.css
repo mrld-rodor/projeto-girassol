@@ -70,9 +70,19 @@ body {
     --sg-leaf: #466b3a;
     --sg-deep: #2f3a2e;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     display: flex;
     min-height: auto;
     overflow: visible;
+    transition: background-color 220ms ease, backdrop-filter 220ms ease, -webkit-backdrop-filter 220ms ease;
+}
+
+.sg-header.sg-header--hero-touch {
+    background-color: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
 }
 
 .sg-header > .relative {
@@ -328,6 +338,12 @@ body {
     width: 100%;
 }
 
+.sg-hero-services-block {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    scroll-margin-top: 6.75rem;
+}
+
 .sg-hero-panel-title {
     color: var(--sg-deep);
     font-family: "Cormorant Garamond", "Times New Roman", serif;
@@ -353,7 +369,7 @@ body {
     display: block;
     filter: drop-shadow(0 8px 12px rgba(122, 75, 30, 0.24));
     transform-style: preserve-3d;
-    width: 3rem;
+    width: 3.8rem;
 }
 
 @keyframes sgCoinSpin {
@@ -578,6 +594,123 @@ body {
     padding: 0;
 }
 
+.sg-services-wrap {
+    background:
+        radial-gradient(circle at 12% 14%, rgba(246, 196, 69, 0.1), transparent 36%),
+        linear-gradient(180deg, #fffefb 0%, #fffaf2 100%);
+    scroll-margin-top: 6.75rem;
+}
+
+.sg-services-grid {
+    display: grid;
+    gap: 1.15rem;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+}
+
+.sg-service-card {
+    display: grid;
+    gap: 0.55rem;
+    justify-items: center;
+    transform: translateY(0) scale(1);
+    transform-origin: center;
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-service-media {
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(246, 196, 69, 0.55);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(122, 75, 30, 0.08);
+    overflow: hidden;
+    transition: box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1), border-color 280ms ease;
+    width: 100%;
+}
+
+.sg-service-card:hover,
+.sg-service-card:focus-within {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.sg-service-card:hover .sg-service-media,
+.sg-service-card:focus-within .sg-service-media {
+    border-color: rgba(246, 196, 69, 0.85);
+    box-shadow: 0 18px 34px rgba(122, 75, 30, 0.2);
+}
+
+.sg-service-media img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.sg-service-label {
+    color: #2f3a2e;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: 640;
+    line-height: 1;
+    margin: 0;
+}
+
+.sg-service-note {
+    align-content: center;
+    display: grid;
+    gap: 0.95rem;
+    justify-items: start;
+    padding: 0;
+}
+
+.sg-service-note-text {
+    color: #314230;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.sg-service-note-cta {
+    align-items: center;
+    background-color: #e89b16;
+    border-radius: 9999px;
+    color: #2b1a0a;
+    display: inline-flex;
+    font-size: 0.72rem;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.08em;
+    min-height: 2.4rem;
+    padding: 0.62rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.sg-service-note-cta:hover,
+.sg-service-note-cta:focus-visible {
+    background-color: #d88e0f;
+    transform: translateY(-1px);
+}
+
+@media (min-width: 640px) {
+    .sg-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .sg-services-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.55fr);
+    }
+
+    .sg-service-note {
+        min-height: 100%;
+        padding-left: 0.7rem;
+    }
+}
+
 @media (max-width: 767px) {
     .sg-nav-link {
         font-size: 0.95rem;
@@ -694,8 +827,15 @@ body {
     .sg-nav-link::after,
     .sg-hero-cta-primary,
     .sg-hero-cta-secondary,
-    .sg-mobile-coin {
+    .sg-mobile-coin,
+    .sg-service-card,
+    .sg-service-media {
         transition: none;
         animation: none;
+    }
+
+    .sg-service-card:hover,
+    .sg-service-card:focus-within {
+        transform: none;
     }
 }
