@@ -324,7 +324,7 @@ body {
     margin-right: auto;
     margin-bottom: 0;
     object-fit: contain;
-    max-width: 100%;
+    max-width: calc(100% - 50px);
     width: 100%;
 }
 
@@ -676,7 +676,7 @@ body {
     }
 
     .sg-hero-portrait {
-        max-width: 100%;
+        max-width: calc(100% - 50px);
     }
 
     .sg-about-grid,
