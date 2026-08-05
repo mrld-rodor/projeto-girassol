@@ -299,7 +299,7 @@ body {
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    max-width: 29rem;
+    max-width: 100%;
     padding: 0;
     width: 100%;
 }
@@ -324,7 +324,7 @@ body {
     margin-right: auto;
     margin-bottom: 0;
     object-fit: contain;
-    max-width: 18rem;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -672,11 +672,11 @@ body {
     }
 
     .sg-hero-panel {
-        max-width: min(100%, 28rem);
+        max-width: 100%;
     }
 
     .sg-hero-portrait {
-        max-width: clamp(11rem, 62vw, 14.5rem);
+        max-width: 100%;
     }
 
     .sg-about-grid,
