@@ -1,20 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     var header = document.querySelector(".sg-header");
-    var firstSection = document.getElementById("inicio");
     var menuButton = document.getElementById("menu-toggle");
     var menu = document.getElementById("menu-principal");
     var openIcon = document.getElementById("menu-icon-open");
     var closeIcon = document.getElementById("menu-icon-close");
 
     function syncHeaderEffect() {
-        if (!header || !firstSection) {
+        if (!header) {
             return;
         }
 
-        var headerRect = header.getBoundingClientRect();
-        var sectionRect = firstSection.getBoundingClientRect();
-        var isTouchingHeader = sectionRect.top <= headerRect.bottom && sectionRect.bottom > headerRect.top;
-        header.classList.toggle("sg-header--hero-touch", isTouchingHeader);
+        var isAwayFromTop = window.scrollY > 0;
+        header.classList.toggle("sg-header--hero-touch", isAwayFromTop);
     }
 
     syncHeaderEffect();

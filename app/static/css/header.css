@@ -422,51 +422,97 @@ body {
 }
 
 .sg-about-grid {
+    align-items: start;
     display: grid;
-    gap: 2rem;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: clamp(0.8rem, 1.8vw, 1.2rem);
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
     margin-top: 1.4rem;
 }
 
 .sg-about-text-flow {
     color: #334130;
     display: grid;
+    font-size: clamp(1.02rem, 0.98rem + 0.2vw, 1.12rem);
     gap: 0.95rem;
-    line-height: 1.72;
+    line-height: 1.8;
 }
 
 .sg-about-text-flow p {
     margin: 0;
 }
 
-.sg-about-aside {
+.sg-about-media-stack {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.sg-about-media-main,
+.sg-about-media-small {
+    border-radius: 1rem;
+    margin: 0;
+    overflow: hidden;
+    transform: translateY(0) scale(1);
+    transform-origin: center;
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-about-media-main {
+    aspect-ratio: 3 / 2;
+}
+
+.sg-about-media-row {
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sg-about-media-small {
+    aspect-ratio: 1 / 1;
+}
+
+.sg-about-media-main img,
+.sg-about-media-small img {
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+    width: 100%;
+}
+
+.sg-about-media-main:hover,
+.sg-about-media-main:focus-within,
+.sg-about-media-small:hover,
+.sg-about-media-small:focus-within {
+    box-shadow: 0 12px 24px rgba(122, 75, 30, 0.12);
+    transform: translateY(-2px) scale(1.015);
+}
+
+.sg-about-media-main:hover img,
+.sg-about-media-main:focus-within img,
+.sg-about-media-small:hover img,
+.sg-about-media-small:focus-within img {
+    transform: scale(1.01);
+}
+
+.sg-about-media-main img {
+    object-fit: cover;
+    object-position: center 22%;
+}
+
+.sg-values-grid {
     display: grid;
     gap: 1.2rem;
-}
-
-.sg-about-card {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-}
-
-.sg-about-card h3 {
-    color: #466b3a;
-    font-family: "Cormorant Garamond", "Times New Roman", serif;
-    font-size: 1.7rem;
-    font-weight: 640;
-    margin: 0;
-}
-
-.sg-about-card p {
-    color: #344634;
-    margin: 0.35rem 0 0;
+    margin-top: 1.8rem;
 }
 
 .sg-values-panel {
-    margin-top: 2.1rem;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(246, 196, 69, 0.35);
+    border-radius: 1rem;
+    box-shadow: 0 14px 28px rgba(122, 75, 30, 0.08);
+    padding: 1.2rem 1.1rem 1.15rem;
+    position: relative;
 }
 
 .sg-values-panel h3,
@@ -479,29 +525,6 @@ body {
     font-weight: 630;
     line-height: 1.1;
     margin: 0;
-}
-
-.sg-values-list {
-    display: grid;
-    gap: 0.35rem 1.5rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    list-style: none;
-    margin: 0.8rem 0 0;
-    padding: 0;
-}
-
-.sg-values-list li {
-    color: #3c4d3a;
-    font-size: 0.94rem;
-    font-weight: 600;
-    padding: 0;
-    text-align: left;
-}
-
-.sg-values-list li::before {
-    color: #e89b16;
-    content: "•";
-    margin-right: 0.5rem;
 }
 
 .sg-how-wrap,
@@ -527,6 +550,17 @@ body {
     height: 1px;
     margin-bottom: 1rem;
     width: min(10rem, 26vw);
+}
+
+.sg-values-panel p {
+    color: #344634;
+    margin: 0.35rem 0 0;
+}
+
+@media (min-width: 768px) {
+    .sg-values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 .sg-how-list {
@@ -776,6 +810,16 @@ body {
         margin-left: 0;
     }
 
+    .sg-service-note {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .sg-service-note-cta {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #menu-toggle {
         border-color: #f6c445;
         right: 0.8rem;
@@ -828,12 +872,20 @@ body {
     .sg-hero-cta-primary,
     .sg-hero-cta-secondary,
     .sg-mobile-coin,
+    .sg-about-media-main,
+    .sg-about-media-small,
+    .sg-about-media-main img,
+    .sg-about-media-small img,
     .sg-service-card,
     .sg-service-media {
         transition: none;
         animation: none;
     }
 
+    .sg-about-media-main:hover,
+    .sg-about-media-main:focus-within,
+    .sg-about-media-small:hover,
+    .sg-about-media-small:focus-within,
     .sg-service-card:hover,
     .sg-service-card:focus-within {
         transform: none;

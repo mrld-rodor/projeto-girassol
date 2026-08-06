@@ -152,7 +152,7 @@
                             <p class="sg-service-note-text">
                                 Um espaco dedicado ao cuidado integral, ao equilibrio e ao bem-estar.
                             </p>
-                            <a href="#servicos" class="sg-service-note-cta">Conheca todos os nossos servicos</a>
+                            <a href="#sobre" class="sg-service-note-cta">Conheca todos os nossos servicos</a>
                         </aside>
                     </div>
                 </div>
@@ -161,10 +161,11 @@
         <section id="sobre" class="sg-about-wrap">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                 <p class="sg-section-eyebrow">Quem somos</p>
-                <h2 class="sg-section-title">Um espaco criado para cuidar de pessoas</h2>
+                <h2 class="sg-section-title">Um espaco criado para cuidar de pessoas.</h2>
 
                 <div class="sg-about-grid">
                     <div class="sg-about-text-flow">
+                        <p></p>                    
                         <p>
                             O Espaco Girassol nasceu da certeza de que o verdadeiro cuidado comeca quando
                             alguem e ouvido, acolhido e respeitado em sua individualidade.
@@ -173,10 +174,10 @@
                             Mais do que oferecer terapias, nossa missao e proporcionar experiencias que despertem
                             equilibrio, tranquilidade e bem-estar, contribuindo para uma vida mais saudavel e harmoniosa.
                         </p>
-                        <p>
-                            Cada atendimento e realizado de forma personalizada, considerando nao apenas os sintomas
-                            ou desafios do momento, mas a pessoa como um todo: corpo, mente, emocoes e energia.
-                        </p>
+                        <h3 style="font-weight: 700; font-size: 1.85rem; color: #466b3a; font-family: 'Cormorant Garamond', sans-serif; font-style: italic;">
+                            "Cada atendimento e realizado de forma personalizada, considerando nao apenas os sintomas
+                            ou desafios do momento, mas a pessoa como um todo: corpo, mente, emocoes e energia."
+                        </h3>
                         <p>
                             Aqui, voce encontra um ambiente preparado para desacelerar, respirar profundamente e
                             permitir que o autocuidado faca parte da sua rotina.
@@ -188,40 +189,57 @@
                         </p>
                     </div>
 
-                    <aside class="sg-about-aside" aria-label="Missao e visao">
-                        <article class="sg-about-card">
-                            <h3>Missao</h3>
-                            <p>
-                                Promover o bem-estar integral por meio das Terapias Integrativas e Complementares,
-                                oferecendo um atendimento humanizado, acolhedor e personalizado que incentive
-                                o autocuidado e a qualidade de vida.
-                            </p>
-                        </article>
-                        <article class="sg-about-card">
-                            <h3>Visao</h3>
-                            <p>
-                                Ser reconhecido como um espaco de referencia em Terapias Integrativas, inspirando
-                                pessoas a viverem com mais equilibrio, saude, consciencia e qualidade de vida.
-                            </p>
-                        </article>
-                    </aside>
+                    <div class="sg-about-media-stack" aria-label="Atendimento e cuidado">
+                        <figure class="sg-about-media-main">
+                            <img
+                                src="{{ url_for('static', filename='images/atuando1.png') }}"
+                                alt="Atendimento integrativo em destaque"
+                                loading="lazy"
+                            >
+                        </figure>
+                        <div class="sg-about-media-row">
+                            <figure class="sg-about-media-small">
+                                <img
+                                    src="{{ url_for('static', filename='images/atuando2.png') }}"
+                                    alt="Momento de cuidado integrativo"
+                                    loading="lazy"
+                                >
+                            </figure>
+                            <figure class="sg-about-media-small">
+                                <img
+                                    src="{{ url_for('static', filename='images/atuando3.png') }}"
+                                    alt="Pratica complementar de bem-estar"
+                                    loading="lazy"
+                                >
+                            </figure>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="sg-values-panel" aria-label="Valores">
-                    <h3>Valores</h3>
-                    <ul class="sg-values-list">
-                        <li>Humanizacao</li>
-                        <li>Etica</li>
-                        <li>Respeito</li>
-                        <li>Empatia</li>
-                        <li>Amor pelo cuidado</li>
-                        <li>Acolhimento</li>
-                        <li>Confianca</li>
-                        <li>Bem-estar</li>
-                        <li>Equilibrio</li>
-                        <li>Espiritualidade com responsabilidade</li>
-                        <li>Desenvolvimento continuo</li>
-                    </ul>
+                <div class="sg-values-grid" aria-label="Missao, visao e valores">
+                    <div class="sg-values-panel" aria-label="Missao">
+                        <h3>Missao</h3>
+                        <p>
+                            Promover o bem-estar integral por meio das Terapias Integrativas e Complementares,
+                            oferecendo um atendimento humanizado, acolhedor e personalizado que incentive
+                            o autocuidado e a qualidade de vida.
+                        </p>
+                    </div>
+                    <div class="sg-values-panel" aria-label="Visao">
+                        <h3>Visao</h3>
+                        <p>
+                            Ser reconhecido como um espaco de referencia em Terapias Integrativas, inspirando
+                            pessoas a viverem com mais equilibrio, saude, consciencia e qualidade de vida.
+                        </p>
+                    </div>
+
+                    <div class="sg-values-panel" aria-label="Valores">
+                        <h3>Valores</h3>
+                        <p>
+                            Trabalhamos pautados na humanização, ética, respeito, empatia e acolhimento,
+                            Valorizamos a confinaça, o bem-estar e o equilíbro, conduzindo cada atendimento com responsabilidade e amor pelo cuidar.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="sg-how-wrap" aria-label="Como funciona">
