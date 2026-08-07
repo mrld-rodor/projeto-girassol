@@ -10,7 +10,7 @@
     <link rel="preload" href="{{ url_for('static', filename='fonts/SourceSans3-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_logo.png') }}">
 </head>
 <body id="topo" class="bg-stone-50 text-stone-900">
@@ -21,6 +21,7 @@
                     src="{{ url_for('static', filename='images/logo_logo_header.png') }}"
                     alt="Logo do Espaco Girassol"
                     class="sg-logo object-cover"
+                    data-anime="down"
                 >
                 <div class="sg-brand-content">
                     <p class="sg-brand leading-none">Espaço Girassol</p>
@@ -73,8 +74,8 @@
             <div class="sg-hero-shell mx-auto max-w-6xl px-4 pt-8 pb-14 sm:px-6 sm:pt-10 sm:pb-18 lg:px-8 lg:pt-12 lg:pb-20">
                 <div class="sg-hero-copy">
                     <p class="sg-hero-eyebrow">ATENDIMENTO INTEGRATIVO</p>
-                    <h1 class="sg-hero-title text-stone-900">Seu bem-estar merece cuidado, equilíbrio e acolhimento.</h1>
-                    <p class="sg-hero-lead text-stone-700">
+                    <h1 data-anime="down" class="sg-hero-title text-stone-900">Seu bem-estar merece cuidado, equilíbrio e acolhimento.</h1>
+                    <p class="sg-hero-lead text-stone-700" data-anime="left">
                         No Espaço Girassol, cada atendimento é um convite para cuidar de si com mais consciência, 
                         serenidade e acolhimento. Através das Terapias Integrativas, oferecemos um caminho para promover
                         equilíbrio físico, emocional, mental e energético, respeitando sua história, seu tempo 
@@ -91,7 +92,7 @@
                         <img
                             src="{{ url_for('static', filename='images/ni_foto_04.png') }}"
                             alt="Nivania Helena Oliveira de Almeida Silva, terapeuta integrativa do Espaco Girassol"
-                            class="sg-hero-portrait"
+                            class="sg-hero-portrait" data-anime="right"
                         >
                         <!-- <p class="sg-hero-panel-kicker">Terapeuta integrativa</p>
                         <h2 class="sg-hero-panel-title">Nivania Helena Oliveira de Almeida Silva</h2>
@@ -110,6 +111,7 @@
                                     src="{{ url_for('static', filename='images/maos.png') }}"
                                     alt="Servico 1"
                                     loading="lazy"
+                                    
                                 >
                             </div>
                             <p class="sg-service-label">Aromaterapia</p>
@@ -312,5 +314,6 @@
     </main>
 
     <script src="{{ url_for('static', filename='js/header.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
