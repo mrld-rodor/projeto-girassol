@@ -1173,6 +1173,7 @@ body {
 }
 
 @media (min-width: 768px) {
+   
     .sg-values-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -1198,9 +1199,12 @@ body {
     #inicio,
     #sobre,
     #servicos,
-    #como-funciona,
     #contacto {
         scroll-margin-top: 70px; /* Menor no mobile */
+    }
+
+    #como-funciona {
+        scroll-margin-top: 98px; /* Ajuste este valor até a imagem ficar inteira no celular */
     }
 
     .sg-header {
