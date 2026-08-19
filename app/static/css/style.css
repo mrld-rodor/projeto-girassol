@@ -77,11 +77,13 @@ html {
 #inicio,
 #sobre,
 #servicos,
-#como-funciona,
 #contacto {
     scroll-margin-top: 90px; /* Ajuste aqui se necessário */
 }
 
+#como-funciona{
+    scroll-margin-top: 148px; /* Ajuste aqui se necessário */
+}
 
 
 /* ============================================================

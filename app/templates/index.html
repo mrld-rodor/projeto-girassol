@@ -81,7 +81,7 @@
                     </p>
                     <div class="sg-hero-actions">
                         <a href="#contacto" class="sg-hero-cta-primary">Agendar avaliacao</a>
-                        <a href="#sobre" class="sg-hero-cta-secondary">Como podemos te ajudar</a>
+                        <a href="#como-funciona" class="sg-hero-cta-secondary">Como podemos te ajudar</a>
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@
                             <p class="sg-service-note-text">
                                 Um espaco dedicado ao cuidado integral, ao equilibrio e ao bem-estar.
                             </p>
-                            <a href="#sobre" class="sg-service-note-cta">Conheca todos os nossos servicos</a>
+                            <a href="#servicos" class="sg-service-note-cta">Conheca todos os nossos servicos</a>
                         </aside>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
                 </div>
 
                 <div class="sg-values-grid" aria-label="Missao, visao e valores">
-                    <div class="sg-values-panel" aria-label="Missao">
+                    <div class="sg-values-panel" aria-label="Missao" data-anime="left">
                         <h3>Missao</h3>
                         <p>
                             Promover o bem-estar integral por meio das Terapias Integrativas e Complementares,
@@ -219,7 +219,7 @@
                         </p>
                     </div>
 
-                    <div class="sg-values-panel" aria-label="Valores">
+                    <div class="sg-values-panel" aria-label="Valores" data-anime="right">
                         <h3>Valores</h3>
                         <p>
                             Trabalhamos pautados na humanização, ética, respeito, empatia e acolhimento,
@@ -250,7 +250,7 @@
                         </p>
                     </article>
 
-                    <div class="sg-therapist-image">
+                    <div class="sg-therapist-image" data-anime="right">
                         <img 
                             src="{{ url_for('static', filename='images/terapeuta.png') }}" 
                             alt="Nivania Helena Oliveira de Almeida Silva, terapeuta integrativa" 
@@ -310,7 +310,7 @@
                     </div>
                 </div>
 
-                <div class="sg-steps-action">
+                <div class="sg-steps-action" data-anime="down">
                     <a href="#contacto" class="sg-steps-cta">Agendar avaliação</a>
                 </div>
             </div>
@@ -326,7 +326,7 @@
                 <div class="sg-services-column" id="services-grid">
                     
                     <!-- Card 1: Cristaloterapia -->
-                    <article class="sg-service-card-column" data-service="cristaloterapia">
+                    <article class="sg-service-card-column" data-service="cristaloterapia" data-anime="left">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/cristaloterapia.png') }}" alt="Cristaloterapia" loading="lazy">
@@ -340,7 +340,7 @@
                     </article>
 
                     <!-- Card 2: Radiestesia -->
-                    <article class="sg-service-card-column" data-service="radiestesia">
+                    <article class="sg-service-card-column" data-service="radiestesia" data-anime="right">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/radiestesia.png') }}" alt="Radiestesia" loading="lazy">
@@ -354,7 +354,7 @@
                     </article>
 
                     <!-- Card 3: Reiki -->
-                    <article class="sg-service-card-column" data-service="reiki">
+                    <article class="sg-service-card-column" data-service="reiki" data-anime="left">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/reiki.png') }}" alt="Reiki" loading="lazy">
@@ -368,7 +368,7 @@
                     </article>
 
                     <!-- Card 4: Florais -->
-                    <article class="sg-service-card-column" data-service="florais">
+                    <article class="sg-service-card-column" data-service="florais" data-anime="right">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/florais.png') }}" alt="Florais" loading="lazy">
@@ -382,7 +382,7 @@
                     </article>
 
                     <!-- Card 5: Tarô Terapêutico -->
-                    <article class="sg-service-card-column" data-service="taro">
+                    <article class="sg-service-card-column" data-service="taro" data-anime="left">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/taro.png') }}" alt="Tarô Terapêutico" loading="lazy">
@@ -396,7 +396,7 @@
                     </article>
 
                     <!-- Card 6: Arteterapia -->
-                    <article class="sg-service-card-column" data-service="arteterapia">
+                    <article class="sg-service-card-column" data-service="arteterapia" data-anime="right">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/arteterapia.png') }}" alt="Arteterapia" loading="lazy">
@@ -410,7 +410,7 @@
                     </article>
 
                     <!-- Card 7: EFT -->
-                    <article class="sg-service-card-column" data-service="eft">
+                    <article class="sg-service-card-column" data-service="eft" data-anime="left">
                         <div class="sg-service-card-inner">
                             <div class="sg-service-card-image">
                                 <img src="{{ url_for('static', filename='images/eft.png') }}" alt="EFT" loading="lazy">
@@ -452,7 +452,7 @@
             <div class="sg-footer-shell mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
                 <div class="sg-footer-content">
                     <p class="sg-footer-text">&copy; 2024 Espaco Girassol. Todos os direitos reservados.</p>
-                    <p class="sg-footer-text">Desenvolvido por <a href="https://www.linkedin.com/in/rodor-mrld/" target="_blank" rel="noopener noreferrer" class="sg-footer-link">Amiraldo Rodrigues    </a></p>
+                    <p class="sg-footer-text">Desenvolvido por <a href="https://www.linkedin.com/in/amiraldo-rodrigues/" target="_blank" rel="noopener noreferrer" class="sg-footer-link">Amiraldo Rodrigues    </a></p>
                 </div>
             </div>
         </footer>            
