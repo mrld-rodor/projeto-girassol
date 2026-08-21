@@ -89,7 +89,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
+    let closingTimeout = null; // Variável para controlar o timeout
+
     function openModal(serviceKey) {
+        // Limpa timeout pendente de fechamento
+        if (closingTimeout) {
+            clearTimeout(closingTimeout);
+            closingTimeout = null;
+        }
+
         const data = servicesData[serviceKey];
         if (!data) return;
 
@@ -136,7 +144,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function closeModal() {
+        // Limpa qualquer timeout pendente
+        if (closingTimeout) {
+            clearTimeout(closingTimeout);
+            closingTimeout = null;
+        }
+
         modal.classList.remove('visible');
+        modal.classList.remove('closing');
         document.body.style.overflow = '';
     }
 
@@ -163,7 +178,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         closeModal();
         
-        const contactSection = document.getElementById('contato');
+        // CORREÇÃO: 'contacto' em vez de 'contato'
+        const contactSection = document.getElementById('contacto');
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
             
