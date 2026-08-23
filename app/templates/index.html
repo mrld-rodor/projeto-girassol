@@ -414,7 +414,68 @@
 
                 </div>
             </div>
-        </section>         
+        </section>     
+        
+        
+        <section id="contacto" class="sg-contact-wrap">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+                <p class="sg-section-eyebrow">Contato</p>
+                <h2 class="sg-section-title">Estamos prontos para te ouvir.</h2>
+                <p class="sg-contact-lead">
+                    Entre em contato conosco para agendar uma avaliação, esclarecer dúvidas ou obter mais informações sobre nossos serviços. 
+                    Estamos aqui para ajudar você a encontrar o cuidado e o equilíbrio que merece.
+                </p>
+                
+                <!-- Coluna do formulário -->
+                <div class="sg-contact-form" data-anime="right">
+                    <h3>Envie sua mensagem</h3>
+                    <form action="/enviar-contato" method="POST">
+                        
+                        <!-- Nome -->
+                        <div class="sg-form-group">
+                            <label for="nome">Seu nome</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="sg-form-group">
+                            <label for="email">Seu e-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                        </div>
+
+                        <!-- Telefone + Serviço (lado a lado) -->
+                        <div class="sg-form-row">
+                            <div class="sg-form-group">
+                                <label for="telefone">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" maxlength="15" required>
+                            </div>
+                            <div class="sg-form-group">
+                                <label for="servico">Serviço de interesse</label>
+                                <select id="servico" name="servico">
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="aromaterapia">Aromaterapia</option>
+                                    <option value="cristaloterapia">Cristaloterapia</option>
+                                    <option value="radiestesia">Radiestesia</option>
+                                    <option value="reiki">Reiki</option>
+                                    <option value="florais">Florais</option>
+                                    <option value="taro">Tarô Terapêutico</option>
+                                    <option value="arteterapia">Arteterapia</option>
+                                    <option value="eft">EFT – Técnica de Libertação Emocional</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Mensagem -->
+                        <div class="sg-form-group">
+                            <label for="mensagem">Como podemos ajudar?</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="sg-form-submit">Enviar mensagem</button>
+                    </form>
+                </div>                
+            </div>
+        </section>
         
         <!-- MODAL DE DETALHES DO SERVIÇO (ADICIONAR ANTES DO FOOTER)     -->
         <div id="service-modal" class="sg-modal" role="dialog" aria-modal="true">
@@ -452,5 +513,20 @@
     <script src="{{ url_for('static', filename='js/header.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/services.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+
+    <!-- Modal de feedback do formulário -->
+    <div id="feedback-modal" class="sg-modal" role="dialog" aria-modal="true">
+        <div class="sg-modal-overlay" id="feedback-overlay"></div>
+        <div class="sg-modal-content sg-feedback-content">
+            <button class="sg-modal-close" id="feedback-close" aria-label="Fechar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div id="feedback-body" class="sg-modal-body"></div>
+        </div>
+    </div>
 </body>
 </html>
