@@ -228,6 +228,17 @@ body {
     text-transform: uppercase;
 }
 
+
+/* ============================================================
+   PADRONIZAÇÃO DOS TÍTULOS PRINCIPAIS
+   ============================================================ */
+.sg-hero-title, 
+.sg-section-title,
+.sg-steps-title,
+.sg-therapist-card h3 {
+    font-size: clamp(2rem, 1.6rem + 2vw, 3.6rem);
+}
+
 /* ============================================================
    8. HERO
    ============================================================ */
@@ -243,6 +254,7 @@ body {
     gap: clamp(1.75rem, 3vw, 3.5rem);
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
+    padding-bottom: 0 !important; 
 }
 
 .sg-hero-copy {
@@ -261,7 +273,7 @@ body {
 .sg-hero-title {
     color: var(--sg-deep);
     font-family: var(--font-serif);
-    font-size: clamp(2.2rem, 1.8rem + 2.2vw, 4.2rem);
+    /* font-size: clamp(2.2rem, 1.8rem + 2.2vw, 4.2rem); */
     font-weight: 640;
     letter-spacing: 0.012em;
     line-height: 1;
@@ -333,6 +345,7 @@ body {
 .sg-hero-visual {
     display: flex;
     justify-content: center;
+    margin-bottom: 0 !important;
 }
 
 .sg-hero-panel {
@@ -378,6 +391,27 @@ body {
     100% { transform: perspective(360px) rotateY(360deg); }
 }
 
+
+/* ============================================================
+   NOVA SEÇÃO: MINI SERVIÇOS
+   ============================================================ */
+.sg-services-mini-wrap {
+    background: #ffffff; /* Fundo branco */
+    border-top: 1px solid rgba(246, 196, 69, 0.15); /* Borda sutil dourada */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.03); /* Sombra leve para separar */
+    scroll-margin-top: 6.75rem;
+}
+
+/* Ajuste do bloco interno */
+.sg-services-mini-wrap .sg-hero-services-block {
+    margin-top: 0; /* Remove margem extra */
+    padding: 0;
+}
+
+
+
+
+
 /* ============================================================
    9. ABOUT
    ============================================================ */
@@ -400,7 +434,7 @@ body {
 .sg-section-title {
     color: var(--sg-deep);
     font-family: var(--font-serif);
-    font-size: clamp(1.95rem, 1.5rem + 1.9vw, 3.2rem);
+    /* font-size: clamp(1.95rem, 1.5rem + 1.9vw, 3.2rem); */
     font-weight: 640;
     letter-spacing: 0.01em;
     line-height: 1.04;
@@ -575,7 +609,7 @@ body {
 }
 
 .sg-steps-horizontal-container {
-    max-width: 1200px;
+    max-width: 72rem;
     width: 100%;
     display: flex;
     align-items: flex-start; 
@@ -597,7 +631,7 @@ body {
 .sg-steps-title {
     color: var(--sg-deep);
     font-family: var(--font-serif);
-    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    /* font-size: clamp(1.8rem, 2.5vw, 2.8rem); */
     font-weight: 640;
     letter-spacing: 0.01em;
     line-height: 1.1;
@@ -703,7 +737,7 @@ body {
 .sg-therapist-card h3 {
     color: var(--sg-deep);
     font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 2vw, 2.4rem);
+    /* font-size: clamp(1.6rem, 2vw, 2.4rem); */
     font-weight: 640;
     margin: 0.2rem 0 0.8rem;
     line-height: 1.1;
@@ -1207,6 +1241,12 @@ body {
     .sg-services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .sg-steps-horizontal-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -1228,6 +1268,11 @@ body {
     .sg-service-note {
         min-height: 100%;
         padding-left: 0.7rem;
+    }
+
+    .sg-steps-horizontal-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
