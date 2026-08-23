@@ -727,7 +727,7 @@ body {
     align-items: flex-start;
     margin-top: 2.5rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(246, 196, 69, 0.25);
+    /* border-top: 1px solid rgba(246, 196, 69, 0.25); */
 }
 
 /* Card da terapeuta (texto) */
@@ -1386,6 +1386,8 @@ body {
         flex-direction: column; /* Um embaixo do outro */
         gap: 1.5rem;
         align-items: center;
+        margin-top: 1rem;    /* Reduz de 2.5rem para 1rem */
+        padding-top: 1rem;   /* Reduz de 2rem para 1rem */
     }
 
     .sg-therapist-image {
