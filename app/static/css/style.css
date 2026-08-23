@@ -675,6 +675,8 @@ body {
     margin: 0;
     max-width: 100%;
     text-align: center;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
 }
 
 /* Botão */
@@ -1432,12 +1434,10 @@ body {
         border-bottom: none;
     }
 
-    .sg-step-number {
-        font-size: 2.5rem;
-    }
-
     .sg-step-text {
         max-width: 100%;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
     }
 
     .sg-steps-cta {
