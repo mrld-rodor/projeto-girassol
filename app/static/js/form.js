@@ -78,12 +78,13 @@ function showFeedback(type, message) {
     if (!feedbackModal) return;
 
     const title = type === 'success' ? 'Tudo certo!' : 'Ops! Algo deu errado.';
-    const logoUrl = "static/images/logo_logo_header.png"; // ou use o caminho direto
-
+    const logoUrl = "/static/images/logo_logo_header.png"; 
+    const formattedMessage = message ? message.replace(/\n/g, '<br>') : '';
+    
     feedbackBody.innerHTML = `
         <img src="${logoUrl}" alt="Espaço Girassol" class="sg-feedback-icon sg-mobile-coin">
         <h3 class="sg-feedback-title">${title}</h3>
-        <p class="sg-feedback-message">${message}</p>
+        <p class="sg-feedback-message">${formattedMessage}</p>
     `;
 
     feedbackModal.classList.add('visible');

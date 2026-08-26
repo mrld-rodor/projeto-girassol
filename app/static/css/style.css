@@ -1387,7 +1387,7 @@ body {
     -webkit-backdrop-filter: blur(16px) saturate(100%);
     border: 1px solid rgba(246, 196, 69, 0.5);
     box-shadow: 0 32px 64px rgba(122, 75, 30, 0.2);
-    text-align: center;
+    text-align: center !important;
     padding: 2.5rem 2rem;
 }
 
@@ -1395,7 +1395,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center !important;
     gap: 0.8rem;
 }
 
@@ -1420,9 +1420,10 @@ body {
     color: #3d4f3a;
     font-family: var(--font-sans);
     font-size: 1rem;
-    text-align: center;
+    text-align: center !important;
     line-height: 1.6;
-    margin: 0;
+    margin-left: auto !important;
+    margin-right: auto !important;
     max-width: 36ch;
 }
 

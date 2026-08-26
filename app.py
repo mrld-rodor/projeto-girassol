@@ -34,7 +34,7 @@ def enviar_contato():
         send_email(contato)
         return jsonify({
             'success': True,
-            'message': 'Mensagem enviada com sucesso! Em breve entraremos em contato.'
+            'message': 'Mensagem enviada com sucesso!\nEm breve entraremos em contato.'
         })
     except EmailNetworkError as e:
         return jsonify({
