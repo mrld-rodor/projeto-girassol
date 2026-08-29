@@ -431,6 +431,13 @@
                     <h3>Envie sua mensagem</h3>
                     <form action="/enviar-contato" method="POST">
                         
+
+                        <!-- Campo Honeypot (invisível para humanos, mas bots preenchem) -->
+                        <div style="position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden;">
+                            <label for="website">Não preencha este campo</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
                         <!-- Nome -->
                         <div class="sg-form-group">
                             <label for="nome">Seu nome</label>

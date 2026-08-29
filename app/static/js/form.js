@@ -28,126 +28,23 @@ if (telefoneInput) {
     });
 }
 
-
-
 // ============================================================
-// FORMULÁRIO EM 2 ETAPAS (OTP)
+// ENVIO DO FORMULÁRIO COM HONEYPOT + TEMPO MÍNIMO
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.sg-contact-form form');
     if (!contactForm) return;
 
-    // Elementos do formulário
-    const submitBtn = contactForm.querySelector('.sg-form-submit');
-    const originalText = submitBtn.textContent;
-
-    // Container para o campo OTP (será criado dinamicamente)
-    let otpContainer = null;
+    // Registra o momento em que o formulário foi carregado
+    const formStart = Date.now();
 
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        // Etapa 1: Enviar dados para gerar OTP
-        if (!otpContainer) {
-            const formData = new FormData(contactForm);
-            submitBtn.textContent = 'Enviando código...';
-            submitBtn.disabled = true;
-
-            try {
-                const response = await fetch('/enviar-contato', {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await response.json();
-
-                if (data.success) {
-                    // Mostrar campo de código
-                    showOtpField(data.email);
-                    submitBtn.textContent = 'Confirmar e enviar mensagem';
-                    submitBtn.disabled = false;
-                } else {
-                    showFeedback('error', data.message || 'Erro ao enviar código.');
-                }
-            } catch (error) {
-                showFeedback('error', 'Erro de conexão. Tente novamente.');
-            } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }
-        } else {
-            // Etapa 2: Validar OTP e enviar mensagem final
-            const code = otpContainer.querySelector('#otp-code').value;
-            const email = otpContainer.dataset.email;
-            const formData = new FormData();
-            formData.append('email', email);
-            formData.append('code', code);
-
-            submitBtn.textContent = 'Verificando...';
-            submitBtn.disabled = true;
-
-            try {
-                const response = await fetch('/verificar-codigo', {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await response.json();
-
-                if (data.success) {
-                    showFeedback('success', data.message);
-                    contactForm.reset();
-                    removeOtpField();
-                } else {
-                    showFeedback('error', data.message || 'Código inválido.');
-                }
-            } catch (error) {
-                showFeedback('error', 'Erro de conexão. Tente novamente.');
-            } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }
-        }
-    });
-
-    function showOtpField(email) {
-        // Remove campo antigo se existir
-        removeOtpField();
-
-        otpContainer = document.createElement('div');
-        otpContainer.className = 'sg-form-group sg-otp-group';
-        otpContainer.dataset.email = email;
-        otpContainer.innerHTML = `
-            <label for="otp-code">Código de verificação</label>
-            <input type="text" id="otp-code" name="otp-code" maxlength="6" placeholder="Digite o código de 6 dígitos" required>
-            <small style="color: #7a4b1e;">Enviamos um código para ${email}. Verifique sua caixa de entrada.</small>
-        `;
-
-        // Insere antes do botão
-        const btn = contactForm.querySelector('.sg-form-submit');
-        btn.parentNode.insertBefore(otpContainer, btn);
-    }
-
-    function removeOtpField() {
-        if (otpContainer) {
-            otpContainer.remove();
-            otpContainer = null;
-        }
-    }
-});
-
-
-
-// ============================================================
-// ENVIO DO FORMULÁRIO + MODAL DE FEEDBACK
-// ============================================================
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.sg-contact-form form');
-    
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Impede envio tradicional
-
         const formData = new FormData(contactForm);
+        // Adiciona o tempo de preenchimento (em segundos) para validação no servidor
+        formData.append('form_start', formStart / 1000);
+
         const submitBtn = contactForm.querySelector('.sg-form-submit');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Enviando...';
@@ -158,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 body: formData
             });
-
             const data = await response.json();
 
             if (data.success) {
@@ -176,7 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Função para exibir o modal de feedback
+// ============================================================
+// FUNÇÃO DE FEEDBACK
+// ============================================================
 function showFeedback(type, message) {
     const feedbackModal = document.getElementById('feedback-modal');
     const feedbackBody = document.getElementById('feedback-body');

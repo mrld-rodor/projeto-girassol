@@ -6,8 +6,8 @@ load_dotenv()
 email_api_url = os.getenv('EMAIL_API_URL', 'https://api.resend.com/emails')
 email_api_timeout = float(os.getenv('EMAIL_API_TIMEOUT', '10'))
 email_api_key = os.getenv('RESEND_API_KEY')
-email_sender = os.getenv('EMAIL_SENDER', 'Espaço Girassol <contato@espacogirassol.com>')
-email_receiver = os.getenv('EMAIL_RECEIVER', 'contato@espacogirassol.com')
+email_sender = os.getenv('EMAIL_SENDER')
+email_receiver = os.getenv('EMAIL_RECEIVER')
 
 # Aviso simples para facilitar depuração em produção (Render: Config Vars)
 missing = []

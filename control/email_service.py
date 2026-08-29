@@ -170,11 +170,14 @@ def send_email(contato):
         raise EmailDeliveryError(
             f"Configuracao de email incompleta: {', '.join(missing)}"
         )
-
+    email_receiver_list = [email.strip() for email in email_receiver.split(',') if email.strip()]
+    # print(f"[DEBUG] EMAIL_SENDER: {email_sender}")
+    # print(f"[DEBUG] EMAIL_RECEIVER: {email_receiver}")
+    # print(f"[DEBUG] EMAIL_API_KEY: {email_api_key[:5]}...")  # Mostra só o início
     try:
         payload = {
             'from': email_sender,
-            'to': [email_receiver],
+            'to': email_receiver_list,
             'subject': f'Novo contato no Espaço Girassol - {contato.nome}',
             'reply_to': contato.email,
             'html': html_body,
