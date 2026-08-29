@@ -1455,6 +1455,56 @@ body {
 }
 
 
+/* ============================================================
+   CAMPO OTP (CÓDIGO DE VERIFICAÇÃO)
+   ============================================================ */
+.sg-otp-group {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(246, 196, 69, 0.08);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(246, 196, 69, 0.3);
+}
+
+.sg-otp-group label {
+    display: block;
+    color: var(--sg-deep);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.sg-otp-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(246, 196, 69, 0.4);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: var(--sg-deep);
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.sg-otp-group input:focus {
+    outline: none;
+    border-color: var(--sg-amber);
+    box-shadow: 0 0 0 3px rgba(232, 155, 22, 0.15);
+}
+
+.sg-otp-group small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #7a4b1e;
+    line-height: 1.4;
+}
+
+
+
+
 
 /* ============================================================
    14. RESPONSIVIDADE
