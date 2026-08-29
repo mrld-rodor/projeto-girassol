@@ -1651,6 +1651,23 @@ body {
 }
 
 /* ============================================================
+   ÍCONE GIRANDO NO FINAL DO CONTEÚDO (POLÍTICA E TERMOS)
+   ============================================================ */
+.sg-policy-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.sg-policy-icon .sg-mobile-coin {
+    width: 7rem;  /* Ajuste o tamanho conforme preferir */
+    height: auto;
+    filter: drop-shadow(0 8px 12px rgba(122, 75, 30, 0.24));
+}
+
+/* ============================================================
    RESPONSIVIDADE DO FOOTER
    ============================================================ */
 @media (max-width: 900px) {
