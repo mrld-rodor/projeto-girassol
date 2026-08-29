@@ -85,5 +85,15 @@ def enviar_contato():
     except Exception as e:
         return jsonify({'success': False, 'message': f'Erro inesperado: {str(e)}'}), 500
 
+
+@app.route('/politica-privacidade')
+def politica_privacidade():
+    return render_template('politica_privacidade.html')
+
+@app.route('/termos-uso')
+def termos_uso():
+    return render_template('termos_uso.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

@@ -1456,6 +1456,242 @@ body {
 
 
 /* ============================================================
+   FOOTER
+   ============================================================ */
+.sg-footer {
+    background: linear-gradient(180deg, #2f3a2e 0%, #1a241a 100%);
+    color: #f7ebcb;
+    padding: 3rem 0 0;
+}
+
+.sg-footer-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr 1.2fr;
+    gap: 2.5rem;
+}
+
+/* Brand */
+.sg-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sg-footer-logo {
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.sg-footer-name {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 640;
+    color: #f6c445;
+    margin: 0;
+}
+
+.sg-footer-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #e89b16;
+    margin: 0;
+}
+
+.sg-footer-about {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #c9c9a8;
+    margin: 0.5rem 0 0;
+    max-width: 300px;
+}
+
+/* Títulos das colunas */
+.sg-footer-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 640;
+    color: #f6c445;
+    margin: 0 0 1rem;
+}
+
+/* Links */
+.sg-footer-links ul,
+.sg-footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sg-footer-links li,
+.sg-footer-contact li {
+    margin-bottom: 0.6rem;
+}
+
+.sg-footer-links a,
+.sg-footer-contact a {
+    color: #c9c9a8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 200ms ease;
+}
+
+.sg-footer-links a:hover,
+.sg-footer-contact a:hover {
+    color: #f6c445;
+}
+
+.sg-footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #c9c9a8;
+    flex-wrap: wrap; /* Permite quebrar o texto se necessário */
+}
+
+.sg-footer-contact li {
+    color: #c9c9a8;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+    margin-bottom: 0.6rem;
+}
+
+/* Redes sociais */
+.sg-social-icons {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.sg-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: #f7ebcb;
+    transition: background 200ms ease, transform 200ms ease, color 200ms ease;
+}
+
+.sg-social-icon:hover {
+    background: #f6c445;
+    color: #2f3a2e;
+    transform: translateY(-3px);
+}
+
+/* Ajuste do link do WhatsApp */
+.sg-whatsapp-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sg-whatsapp-link svg {
+    flex-shrink: 0; /* Impede que o ícone seja comprimido */
+}
+
+.sg-legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(246,196,69,0.2); /* Linha sutil para separar */
+}
+
+.sg-legal-link {
+    color: #c9c9a8;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.sg-legal-link:hover {
+    color: #f6c445;
+}
+
+
+/* Barra inferior */
+.sg-footer-bottom {
+    border-top: 1px solid rgba(246,196,69,0.2);
+    margin-top: 2.5rem;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;    /* Centraliza horizontalmente */
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background: rgba(0,0,0,0.3);
+}
+
+.sg-footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #a0a08a;
+}
+
+.sg-footer-bottom a {
+    color: #f6c445;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.sg-footer-bottom a:hover {
+    color: #e89b16;
+}
+
+/* ============================================================
+   RESPONSIVIDADE DO FOOTER
+   ============================================================ */
+@media (max-width: 900px) {
+    .sg-footer-shell {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sg-footer-shell {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sg-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   ACESSIBILIDADE
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .sg-social-icon {
+        transition: none;
+    }
+
+    .sg-social-icon:hover {
+        transform: none;
+    }
+
+    .sg-footer-links a,
+    .sg-footer-contact a {
+        transition: none;
+    }
+}
+
+
+/* ============================================================
    14. RESPONSIVIDADE
    ============================================================ */
 @media (min-width: 640px) {
