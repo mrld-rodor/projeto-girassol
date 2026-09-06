@@ -18,16 +18,18 @@
         <div class="relative flex w-full items-center justify-between pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pl-8 lg:pr-8">
             <a href="#topo" class="sg-brand-lock" aria-label="Ir para o topo da pagina">
                 <img
-                    src="{{ url_for('static', filename='images/logo_logo_header.png') }}"
+                    src="{{ url_for('static', filename='images/novo_logo_transparente.png') }}"
                     alt="Logo do Espaco Girassol"
-                    class="sg-logo object-cover"
-                    data-anime="down"
-                >
-                <div class="sg-brand-content">
-                    <p class="sg-brand leading-none">Espaço Girassol</p>
-                    <p class="sg-kicker text-stone-600">Terapias integrativas</p>
-                </div>
-            </a>
+                    class="sg-logo"
+                    data-anime="down">
+                
+                <img
+                    src="{{ url_for('static', filename='images/novo_logo_texto_trasnparente.png') }}"
+                    alt="Terapias Integrativas"
+                    class="sg-logo-text"
+                    data-anime="right"> 
+            </a> 
+            
 
             <button
                 id="menu-toggle"
@@ -503,12 +505,13 @@
                 </div>
             </div>
         </div>
+    </main>
 
     <footer class="sg-footer">
         <div class="sg-footer-shell">
             <div class="sg-footer-brand">
-                <img src="{{ url_for('static', filename='images/logo_logo_header.png') }}" alt="Espaço Girassol" class="sg-footer-logo">
-                <p class="sg-footer-name">Espaço Girassol</p>
+                <img src="{{ url_for('static', filename='images/novo_logo_transparente.png') }}" alt="Espaço Girassol" class="sg-footer-logo">
+                <p class="sg-footer-name">Space Girassol</p>
                 <p class="sg-footer-tagline">Terapias Integrativas</p>
             </div>
             <div class="sg-footer-links">
@@ -548,18 +551,9 @@
             <p>&copy; 2024 Espaço Girassol. Todos os direitos reservados.</p>
             <p>Desenvolvido por <a href="https://www.linkedin.com/in/amiraldo-rodrigues/" target="_blank" rel="noopener noreferrer">Amiraldo Rodrigues</a></p>
         </div>
-    </footer>
-        <!-- <footer class="sg-footer bg-stone-900 text-stone-50">
-            <div class="sg-footer-shell mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-                <div class="sg-footer-content">
-                    <p class="sg-footer-text">&copy; 2024 Espaco Girassol. Todos os direitos reservados.</p>
-                    <p class="sg-footer-text">Desenvolvido por <a href="https://www.linkedin.com/in/amiraldo-rodrigues/" target="_blank" rel="noopener noreferrer" class="sg-footer-link">Amiraldo Rodrigues    </a></p>
-                </div>
-            </div>
-        </footer>             -->
+    </footer>     
             
-        
-    </main>
+    
 
     <script src="{{ url_for('static', filename='js/header.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

@@ -34,7 +34,7 @@
 /* ============================================================
    2. VARIÁVEIS GLOBAIS
    ============================================================ */
-:root {
+/* :root {
     --sg-sunflower: #f6c445;
     --sg-amber: #e89b16;
     --sg-seed: #7a4b1e;
@@ -42,6 +42,21 @@
     --sg-petal: #f7ebcb;
     --sg-deep: #2f3a2e;
     --sg-line: rgba(246, 196, 69, 0.55);
+
+    /* Tipografia *//*
+    --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+} Foi mudado para ver o tema diferente*/
+
+
+:root {
+    --sg-sunflower: #e8a820;
+    --sg-amber: #d4981a;
+    --sg-seed: #5c3a21;
+    --sg-leaf: #4a5d3a;
+    --sg-petal: #f5ebd9;
+    --sg-deep: #3a2f25;
+    --sg-line: rgba(232, 168, 32, 0.55);
 
     /* Tipografia */
     --font-serif: "Cormorant Garamond", "Times New Roman", serif;
@@ -158,6 +173,17 @@ body {
     width: clamp(4.8rem, 8vw, 8.8rem);
 }
 
+.sg-logo-text {
+    /* aspect-ratio: 2 / 1; */
+    display: block;
+    flex-shrink: 0;
+    width: 310px;
+    height: auto;
+    margin: 0;
+    position: relative;
+    /* width: clamp(6rem, 10vw, 10rem); */
+}
+
 .sg-brand {
     color: var(--sg-leaf);
     font-family: var(--font-serif);
@@ -242,11 +268,18 @@ body {
 /* ============================================================
    8. HERO
    ============================================================ */
-.sg-hero-wrap {
+/* .sg-hero-wrap {
     background:
         radial-gradient(circle at 12% 20%, rgba(246, 196, 69, 0.14), transparent 44%),
         radial-gradient(circle at 87% 82%, rgba(247, 235, 203, 0.56), transparent 50%),
         linear-gradient(180deg, #fffefb 0%, #fffaf0 100%);
+} Foi mudado paraver o tema diferente*/
+
+.sg-hero-wrap {
+    background:
+        radial-gradient(circle at 12% 20%, rgba(232, 168, 32, 0.14), transparent 44%),
+        radial-gradient(circle at 87% 82%, rgba(245, 235, 217, 0.56), transparent 50%),
+        linear-gradient(180deg, #fdf9f0 0%, #f5ebd9 100%);
 }
 
 .sg-hero-shell {
@@ -415,11 +448,17 @@ body {
 /* ============================================================
    9. ABOUT
    ============================================================ */
-.sg-about-wrap {
+/* .sg-about-wrap {
     background:
         radial-gradient(circle at 88% 11%, rgba(246, 196, 69, 0.1), transparent 35%),
         linear-gradient(180deg, #fffefc 0%, #fffaf3 100%);
     scroll-margin-top: 6.75rem;
+} Mudado para ver o tema diferente*/
+
+.sg-about-wrap {
+    background:
+        radial-gradient(circle at 88% 11%, rgba(232, 168, 32, 0.1), transparent 35%),
+        linear-gradient(180deg, #fdf9f0 0%, #f5ebd9 100%);
 }
 
 .sg-section-eyebrow {
@@ -527,8 +566,10 @@ body {
 }
 
 .sg-values-panel {
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(246, 196, 69, 0.35);
+    /* background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(246, 196, 69, 0.35); */
+    background: rgba(253, 249, 240, 0.85);
+    border: 1px solid rgba(232, 168, 32, 0.35);
     border-radius: 1rem;
     box-shadow: 0 14px 28px rgba(122, 75, 30, 0.08);
     padding: 1.2rem 1.1rem 1.15rem;
@@ -778,8 +819,10 @@ body {
    ============================================================ */
 .sg-services-wrap {
     background:
-        radial-gradient(circle at 12% 14%, rgba(246, 196, 69, 0.1), transparent 36%),
-        linear-gradient(180deg, #fffefb 0%, #fffaf2 100%);
+        /* radial-gradient(circle at 12% 14%, rgba(246, 196, 69, 0.1), transparent 36%),
+        linear-gradient(180deg, #fffefb 0%, #fffaf2 100%); Mudado para ver o tema diferente*/
+        radial-gradient(circle at 88% 80%, rgba(232, 168, 32, 0.08), transparent 40%),
+        linear-gradient(180deg, #fdf9f0 0%, #f5ebd9 100%);
     scroll-margin-top: 6.75rem;
 }
 
@@ -898,8 +941,10 @@ body {
 }
 
 .sg-service-card-column {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(246, 196, 69, 0.25);
+    /* background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(246, 196, 69, 0.25); mudado para ver o tema diferente*/
+    background: rgba(253, 249, 240, 0.9);
+    border: 1px solid rgba(232, 168, 32, 0.25);
     border-radius: 1.25rem;
     padding: 1.5rem;
     box-shadow: 0 8px 24px rgba(122, 75, 30, 0.06);
@@ -1478,11 +1523,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: center;
 }
 
 .sg-footer-logo {
     width: 80px;
-    height: auto;
+    height: auto;    
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
@@ -1832,6 +1878,12 @@ body {
         flex-direction: column;
         align-items: stretch;
     }
+
+    .sg-hero-cta-primary {
+    background-color: var(--sg-amber);
+    box-shadow: 0 12px 24px rgba(92, 58, 33, 0.25);
+    /* ... */
+}
 
     .sg-hero-cta-primary,
     .sg-hero-cta-secondary {
