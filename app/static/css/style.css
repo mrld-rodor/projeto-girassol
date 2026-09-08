@@ -620,7 +620,7 @@ body {
     width: 100vw;
     max-width: 100%;
     min-height: 300px;      
-    background-image: url("../images/passos_backgroud.png");
+    background-image: url("../images/passos_backgroud.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

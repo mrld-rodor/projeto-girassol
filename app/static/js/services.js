@@ -6,7 +6,7 @@ const servicesData = {
         nome: "Cristaloterapia",
         resumo: "A Cristaloterapia é uma terapia integrativa que utiliza a energia dos cristais para harmonizar os centros energéticos do corpo, promovendo equilíbrio físico, emocional e espiritual.",
         objetivo: "Auxiliar na redução do estresse, ansiedade, cansaço e no fortalecimento da energia vital.",
-        comoFunciona: "No Espaço Girassol, o atendimento é personalizado, com a escolha dos cristais de acordo com as necessidades de cada pessoa.",
+        comoFunciona: "No Espaço Girassol, o atendimento é personalizado, com a escolha dos cristais, de acordo com as necessidades de cada pessoa.",
         duracao: "Aproximadamente 60 minutos.",
         formato: "Presencial",
         paraQuem: "Pessoas que buscam equilíbrio energético, redução do estresse e bem-estar geral.",
