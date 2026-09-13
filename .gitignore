@@ -53,3 +53,9 @@ desktop.ini
 *.pem
 *.key
 *.crt
+
+# Tailwind CLI (baixado automaticamente)
+tailwindcss
+
+# Documentation
+Documentacao_Tecnica_Space_Girassol.pdf
