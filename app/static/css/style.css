@@ -1830,7 +1830,7 @@ body {
     }
 
     .sg-logo-text {
-        width: clamp(180px, 45vw, 260px);
+        width: clamp(6rem, 50vw, 20rem) !important;
     }
 
     .sg-brand {
