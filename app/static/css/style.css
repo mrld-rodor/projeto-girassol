@@ -181,7 +181,7 @@ body {
     height: auto;
     margin: 0;
     position: relative;
-    width: clamp(6rem, 10vw, 10rem);
+    width: clamp(6rem, 15vw, 20rem);
 }
 
 .sg-brand {
