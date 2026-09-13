@@ -174,14 +174,14 @@ body {
 }
 
 .sg-logo-text {
-    /* aspect-ratio: 2 / 1; */
+    aspect-ratio: 2 / 1;
     display: block;
     flex-shrink: 0;
     width: 310px;
     height: auto;
     margin: 0;
     position: relative;
-    /* width: clamp(6rem, 10vw, 10rem); */
+    width: clamp(6rem, 10vw, 10rem);
 }
 
 .sg-brand {
@@ -207,7 +207,7 @@ body {
 .sg-nav-shell {
     margin-left: auto;
     max-width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 .sg-nav-link {
@@ -1829,6 +1829,10 @@ body {
         width: clamp(5.2rem, 13vw, 7rem);
     }
 
+    .sg-logo-text {
+        width: clamp(180px, 45vw, 260px);
+    }
+
     .sg-brand {
         font-size: clamp(1.2rem, 4.2vw, 1.45rem);
     }
@@ -1842,7 +1846,7 @@ body {
         font-size: 0.95rem;
     }
 
-    .sg-nav-shell {
+    /* .sg-nav-shell {
         left: auto;
         margin-left: auto;
         max-width: 100%;
@@ -1850,7 +1854,7 @@ body {
         top: auto;
         transform: none;
         width: auto;
-    }
+    } */
 
     .sg-brand-content {
         align-items: flex-start;

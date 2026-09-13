@@ -6,12 +6,13 @@
     <title>Termos de Uso | Space Girassol</title>
     <meta name="description" content="Termos de Uso do Espaço Girassol. Saiba como utilizamos nosso site e serviços com transparência.">
 
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/novo_logo_transparente.webp') }}">
+
     <link rel="preload" href="{{ url_for('static', filename='fonts/CormorantGaramond-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="{{ url_for('static', filename='fonts/SourceSans3-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_logo_header.webp') }}">
+    
 </head>
 <body class="bg-stone-50 text-stone-900">
     <!-- Header (reutilizado do index) -->
