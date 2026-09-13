@@ -6,9 +6,15 @@
     <title>Space Girassol | Terapias Integrativas</title>
     <meta name="description" content="Espaco Girassol: terapias integrativas com acolhimento, clareza e cuidado humano.">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="print" onload="this.media='all'">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/novo_logo_transparente.webp') }}">
+
+    <!-- Fallback para navegadores com JavaScript desativado -->
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </noscript>
 
     <link rel="preload" href="{{ url_for('static', filename='fonts/CormorantGaramond-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="{{ url_for('static', filename='fonts/SourceSans3-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
